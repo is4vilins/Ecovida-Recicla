@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EcoVida Recicla — Sustentabilidade e Inclusão Social</title>
+  <meta name="description" content="EcoVida Recicla: coleta seletiva, transformação de resíduos e geração de renda para comunidades. Soluções sustentáveis para famílias, empresas e instituições." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">EcoVida Recicla</a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#partners">Parceiros</a>
+        <a href="#contact">Contato</a>
+      </nav>
+      <button class="btn btn-primary cta" onclick="scrollToSection('#contact')">Faça uma parceria</button>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Transformando resíduos em oportunidades</h1>
+          <p class="lead">A EcoVida Recicla promove sustentabilidade e inclusão social por meio da coleta seletiva e da transformação de materiais recicláveis em novos produtos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">Nossos serviços</a>
+            <a class="btn" href="#about">Saiba mais</a>
+          </div>
+        </div>
+        <figure aria-hidden="true">
+          <img src="assets/hero-placeholder.jpg" alt="Exemplo de reutilização de materiais recicláveis" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Sobre a EcoVida Recicla</h2>
+        <p>A EcoVida Recicla é uma empresa socialmente responsável dedicada à coleta e transformação de materiais recicláveis. Nosso propósito é gerar renda para comunidades em situação de vulnerabilidade enquanto reduzimos o impacto ambiental.</p>
+        <ul class="features">
+          <li><strong>Missão:</strong> Gerar emprego e renda com práticas ambientais responsáveis.</li>
+          <li><strong>Visão:</strong> Ser referência local em reciclagem e reaproveitamento.</li>
+          <li><strong>Valores:</strong> Sustentabilidade, inclusão, transparência e comunidade.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2>Serviços</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Coleta seletiva</h3>
+            <p>Serviço de coleta para residências, empresas e eventos com logística flexível e preços acessíveis.</p>
+          </article>
+          <article class="card">
+            <h3>Transformação e produtos</h3>
+            <p>Transformamos resíduos em vasos, artesanatos e materiais sustentáveis para construção.</p>
+          </article>
+          <article class="card">
+            <h3>Oficinas educativas</h3>
+            <p>Oficinas para escolas e comunidades sobre separação de resíduos, reutilização e empreendedorismo social.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners" class="section">
+      <div class="container">
+        <h2>Parcerias estratégicas</h2>
+        <p>Trabalhamos com cooperativas de reciclagem, ONGs ambientais, escolas e prefeituras para ampliar impacto social e ambiental.</p>
+        <div class="partners-grid" aria-hidden="true">
+          <img src="assets/partner1.jpg" alt="Parceiro 1" loading="lazy" />
+          <img src="assets/partner2.jpg" alt="Parceiro 2" loading="lazy" />
+          <img src="assets/partner3.jpg" alt="Parceiro 3" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contato</h2>
+          <p>Entre em contato para solicitar coleta, firmar parcerias ou agendar uma oficina.</p>
+          <dl>
+            <dt>Telefone</dt>
+            <dd><a href="tel:+550000000000">+55 (00) 0000-0000</a></dd>
+            <dt>E-mail</dt>
+            <dd><a href="mailto:contato@ecovidarecicla.org">contato@ecovidarecicla.org</a></dd>
+            <dt>Atendimento</dt>
+            <dd>Segunda a sexta — 8h às 17h</dd>
+          </dl>
+          <p class="small">Ou envie uma mensagem pelo formulário ao lado.</p>
+        </div>
+        <form id="contact-form" onsubmit="handleSubmit(event)" novalidate>
+          <label>
+            Nome
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E-mail
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Assunto
+            <input type="text" name="subject" />
+          </label>
+          <label>
+            Mensagem
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+            <button class="btn" type="reset">Limpar</button>
+          </div>
+          <p id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© EcoVida Recicla — Todos os direitos reservados</p>
+      <nav aria-label="Links rápidos">
+        <a href="#about">Sobre</a>
+        <a href="#services">Serviços</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
